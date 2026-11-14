@@ -1,0 +1,47 @@
+:root{--marathi:'Baloo 2',sans-serif}
+.brand-logo{display:block;width:194px;height:63px;object-fit:contain;mix-blend-mode:multiply}
+.footer-brand .brand-logo{width:178px;height:58px;mix-blend-mode:normal;background:#fffaf0;border-radius:4px}
+.hero-art{overflow:hidden;border-radius:48% 48% 46% 46% / 40% 40% 44% 44%;background:#ecd7b4;isolation:isolate}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.photo-wash{position:absolute;inset:0;background:linear-gradient(135deg,#f2a90018,#6b3e2630 70%);mix-blend-mode:multiply}
+.hero-art .round-seal{right:5%;top:6%;background:var(--cream)}
+.hero-art .art-caption{background:#fff6e5e8;padding:8px 12px;border-radius:30px;right:4%;bottom:5%;font-size:12px}
+.product-visual{isolation:isolate}
+.product-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.86)}
+.product-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff6e52b,#6b3e2633);z-index:0}
+.product-index,.visual-caption{z-index:1;background:#fff6e5dc;padding:4px 8px;border-radius:20px}
+.product-visual img[src*="spice-detail"]{object-position:center 52%}
+.about-frame{overflow:visible;background:transparent;padding:0}
+.about-frame img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:46% 46% 43% 43%;box-shadow:0 20px 48px #6b3e2620}
+.about-vertical{left:-21px}.about-sticker{box-shadow:0 5px 14px #34231925}
+body{font-size:15px}
+.hero h1{font-size:clamp(42px,4.5vw,58px);line-height:1.12;max-width:560px}
+.hero-intro{font-size:14px}
+.section-heading h2,.about h2,.values h2,.process h2,.serve h2{font-size:clamp(34px,3.5vw,46px);line-height:1.2}
+.product-info h3,.serve-list h3{font-size:18px}
+.product-desc,.about-copy>p:not(.eyebrow),.value-item p,.process-grid p,.serve-list article p,.heading-note{font-size:12px}
+.lang-mr [data-mr],.lang-mr .hero h1,.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2,.lang-mr .contact h2,.lang-mr .product-info h3,.lang-mr .process-grid h3,.lang-mr .serve-list h3{font-family:'Baloo 2',sans-serif;letter-spacing:0}
+.lang-mr .hero h1{font-size:clamp(41px,4.5vw,56px);line-height:1.35}
+.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2,.lang-mr .contact h2{font-size:clamp(36px,3.6vw,46px);line-height:1.35}
+.lang-mr .hero-intro,.lang-mr .heading-note,.lang-mr .product-desc,.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,.lang-mr .process-grid p,.lang-mr .process-head>p,.lang-mr .serve-copy>p:not(.eyebrow),.lang-mr .serve-list article p,.lang-mr .contact-invite,.lang-mr .contact address{font-family:'Baloo 2',sans-serif;font-size:13px;line-height:1.8}
+.lang-mr .product-info h3,.lang-mr .serve-list h3{font-size:19px}
+.lang-mr .primary-nav>a{font-family:'Baloo 2',sans-serif;font-size:13px}
+@media(max-width:900px){.brand-logo{width:170px;height:58px}.hero h1{font-size:clamp(40px,5.4vw,52px)}}
+@media(max-width:650px){.brand-logo{width:154px;height:53px}.hero h1{font-size:clamp(41px,10vw,53px)}.section-heading h2,.about h2,.values h2,.process h2,.serve h2{font-size:36px}.product-desc,.about-copy>p:not(.eyebrow),.value-item p,.process-grid p,.serve-list article p,.heading-note{font-size:11px}.hero-art{height:320px;border-radius:47% 47% 44% 44% / 38% 38% 42% 42%}.footer-brand .brand-logo{width:150px;height:51px}.lang-mr .hero h1{font-size:clamp(38px,9.4vw,49px);line-height:1.4}.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2,.lang-mr .contact h2{font-size:34px;line-height:1.45}}
+/* Give the provided square logo room and keep tablet navigation from squeezing it. */
+@media(max-width:800px){.site-header{height:90px}.nav-shell{width:calc(100% - 36px)}.brand-logo{width:76px;height:76px;flex:0 0 76px}.menu-toggle{display:flex;flex-direction:column;gap:5px;justify-content:center;border:0;background:transparent;padding:10px;cursor:pointer}.menu-toggle span{width:22px;height:2px;background:var(--brown)}.primary-nav{display:none;position:absolute;top:90px;left:0;right:0;padding:14px 22px 19px;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 18px #382a1811;align-items:stretch;gap:0}.primary-nav.open{display:flex;flex-direction:column}.primary-nav>a{padding:11px 4px;border-bottom:1px solid #eadfce;font-size:13px}.language-toggle{align-self:flex-start;margin-top:13px}.hero-art .art-caption{left:50%;right:auto;bottom:12px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px);justify-content:center;text-align:center;white-space:normal;font-size:11px;color:#59402e;background:#fff8e9;padding:8px 12px;box-shadow:0 2px 12px #1e120d3a}.lang-mr .primary-nav>a{font-size:15px}}
+@media(max-width:650px){html{scroll-padding-top:78px}.site-header{height:76px}.brand-logo{width:70px;height:70px;flex:0 0 70px}.primary-nav{top:76px}.footer-brand .brand-logo{width:150px;height:51px}}
+/* Match type sizes across both languages; only the script face and line height vary. */
+.lang-mr .hero h1{font-size:clamp(42px,4.5vw,58px)}
+.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2,.lang-mr .contact h2{font-size:clamp(34px,3.5vw,46px)}
+.lang-mr .hero-intro,.lang-mr .heading-note,.lang-mr .product-desc,.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,.lang-mr .process-grid p,.lang-mr .process-head>p,.lang-mr .serve-copy>p:not(.eyebrow),.lang-mr .serve-list article p,.lang-mr .contact-invite,.lang-mr .contact address{font-size:12px}
+.lang-mr .primary-nav>a{font-size:13px}
+.lang-mr .product-info h3,.lang-mr .serve-list h3{font-size:18px}
+@media(max-width:650px){.lang-mr .hero h1{font-size:clamp(41px,10vw,53px)}.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2{font-size:36px}.lang-mr .product-desc,.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,.lang-mr .process-grid p,.lang-mr .serve-list article p,.lang-mr .heading-note{font-size:11px}.lang-mr .contact h2{font-size:52px}.lang-mr .primary-nav>a{font-size:13px}}
+/* User requested one text height everywhere, regardless of language or role. */
+body *{font-size:16px!important;line-height:1.5!important}
+/* Preserve the single text size while avoiding cramped label and button wraps. */
+.hero .eyebrow{letter-spacing:.07em;gap:8px}
+.hero-bottom-rule{grid-template-columns:86px minmax(20px,1fr) auto}
+.hero-bottom-rule span:first-child{white-space:nowrap;letter-spacing:.08em}
+.button{height:auto;min-height:58px;padding:8px 16px;gap:12px}
