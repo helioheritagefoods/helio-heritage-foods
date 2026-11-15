@@ -28,6 +28,8 @@
     langLabel.textContent = next === 'en' ? 'मराठी' : 'English';
     langIcon.textContent = next === 'en' ? 'अ' : 'En';
     toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Marathi' : 'Switch to English');
+    menuButton.setAttribute('aria-label', next === 'en' ? 'Open navigation' : 'नेव्हिगेशन उघडा');
+    nav.setAttribute('aria-label', next === 'en' ? 'Main navigation' : 'मुख्य नेव्हिगेशन');
   }
 
   toggle.addEventListener('click', () => setLanguage(language === 'en' ? 'mr' : 'en'));
