@@ -102,3 +102,50 @@ h1,h2,h3,.signature strong,.contact-email{font-family:'Manrope',sans-serif}
   .hero h1{font-size:clamp(40px,10vw,53px)}
   .lang-mr .hero h1{font-size:clamp(38px,9.5vw,50px);line-height:1.45}
 }
+
+
+/* Improve readability of small uppercase section and metadata labels. */
+.eyebrow,
+.product-kicker,
+.detail-label {
+  font-size: 12px;
+  letter-spacing: .14em;
+  line-height: 1.5;
+}
+.product-kicker { font-size: 11px; }
+.detail-label { font-size: 11px; }
+.signature small,
+.hero-bottom-rule,
+.footer-bottom {
+  font-size: 10px;
+}
+.product-index,
+.step-number,
+.serve-num {
+  font-size: 10px;
+}
+.lang-mr .eyebrow,
+.lang-mr .product-kicker,
+.lang-mr .detail-label,
+.lang-mr .signature small,
+.lang-mr .hero-bottom-rule,
+.lang-mr .footer-bottom {
+  font-size: 12px;
+  letter-spacing: 0;
+}
+@media (max-width: 650px) {
+  .eyebrow,
+  .product-kicker,
+  .detail-label { font-size: 11px; }
+  .product-kicker,
+  .detail-label { font-size: 10px; }
+  .signature small,
+  .hero-bottom-rule,
+  .footer-bottom,
+  .product-index,
+  .step-number,
+  .serve-num { font-size: 9px; }
+  .lang-mr .eyebrow,
+  .lang-mr .product-kicker,
+  .lang-mr .detail-label { font-size: 11px; }
+}
