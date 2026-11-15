@@ -38,9 +38,7 @@ body{font-size:15px}
 .lang-mr .primary-nav>a{font-size:13px}
 .lang-mr .product-info h3,.lang-mr .serve-list h3{font-size:18px}
 @media(max-width:650px){.lang-mr .hero h1{font-size:clamp(41px,10vw,53px)}.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2{font-size:36px}.lang-mr .product-desc,.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,.lang-mr .process-grid p,.lang-mr .serve-list article p,.lang-mr .heading-note{font-size:11px}.lang-mr .contact h2{font-size:52px}.lang-mr .primary-nav>a{font-size:13px}}
-/* User requested one text height everywhere, regardless of language or role. */
-body *{font-size:16px!important;line-height:1.5!important}
-/* Preserve the single text size while avoiding cramped label and button wraps. */
+/* Preserve the semantic type scale defined in styles.css. */\n/* Preserve the single text size while avoiding cramped label and button wraps. */
 .hero .eyebrow{letter-spacing:.07em;gap:8px}
 .hero-bottom-rule{grid-template-columns:86px minmax(20px,1fr) auto}
 .hero-bottom-rule span:first-child{white-space:nowrap;letter-spacing:.08em}
