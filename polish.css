@@ -38,10 +38,67 @@ body{font-size:15px}
 .lang-mr .primary-nav>a{font-size:13px}
 .lang-mr .product-info h3,.lang-mr .serve-list h3{font-size:18px}
 @media(max-width:650px){.lang-mr .hero h1{font-size:clamp(41px,10vw,53px)}.lang-mr .section-heading h2,.lang-mr .about h2,.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2{font-size:36px}.lang-mr .product-desc,.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,.lang-mr .process-grid p,.lang-mr .serve-list article p,.lang-mr .heading-note{font-size:11px}.lang-mr .contact h2{font-size:52px}.lang-mr .primary-nav>a{font-size:13px}}
-/* User requested one text height everywhere, regardless of language or role. */
-body *{font-size:16px!important;line-height:1.5!important}
-/* Preserve the single text size while avoiding cramped label and button wraps. */
+/* Preserve the semantic type scale defined in styles.css. */\n/* Preserve the single text size while avoiding cramped label and button wraps. */
 .hero .eyebrow{letter-spacing:.07em;gap:8px}
 .hero-bottom-rule{grid-template-columns:86px minmax(20px,1fr) auto}
 .hero-bottom-rule span:first-child{white-space:nowrap;letter-spacing:.08em}
 .button{height:auto;min-height:58px;padding:8px 16px;gap:12px}
+
+
+/* Helio Heritage Foods — minimal, modern spice palette and typography */
+:root{
+  --yellow:#E6A817;
+  --red:#B83B32;
+  --green:#315C45;
+  --brown:#292722;
+  --cream:#FFF8ED;
+  --paper:#FFFCF6;
+  --ink:#292722;
+  --muted:#746B5F;
+  --line:#E9DFD0;
+  --serif:'Manrope',sans-serif;
+  --sans:'Manrope',sans-serif;
+  --marathi:'Noto Sans Devanagari',sans-serif;
+}
+body{font-family:'Manrope',sans-serif;color:#292722;background:#FFF8ED}
+h1,h2,h3,.signature strong,.contact-email{font-family:'Manrope',sans-serif}
+.lang-mr [data-mr],
+.lang-mr .hero h1,.lang-mr .section-heading h2,.lang-mr .about h2,
+.lang-mr .values h2,.lang-mr .process h2,.lang-mr .serve h2,
+.lang-mr .contact h2,.lang-mr .product-info h3,.lang-mr .process-grid h3,
+.lang-mr .serve-list h3,.lang-mr .primary-nav>a,
+.lang-mr .hero-intro,.lang-mr .heading-note,.lang-mr .product-desc,
+.lang-mr .about-copy>p:not(.eyebrow),.lang-mr .value-item p,
+.lang-mr .process-grid p,.lang-mr .process-head>p,
+.lang-mr .serve-copy>p:not(.eyebrow),.lang-mr .serve-list article p,
+.lang-mr .contact-invite,.lang-mr .contact address{
+  font-family:'Noto Sans Devanagari',sans-serif;
+}
+.hero h1,.section-heading h2,.about h2,.values h2,.process h2,.serve h2,.contact h2{
+  color:#292722;letter-spacing:-.035em;font-weight:700
+}
+.hero h1{font-size:clamp(42px,4.8vw,62px)}
+.eyebrow,.product-kicker,.detail-label{color:#B83B32}
+.button-primary{background:#E6A817;color:#292722}
+.button-primary:hover{background:#d39a12}
+.button-quiet{border-color:#D9CBB8;color:#315C45}
+.product-card{border-color:#E9DFD0;border-radius:12px;overflow:hidden;background:#fff}
+.product-card:hover{box-shadow:0 16px 34px #29272212}
+.product-visual{background:#F8EEDB}
+.product-visual img{filter:saturate(1.04)}
+.product-info h3{color:#292722;font-family:'Manrope',sans-serif}
+.marathi-name{font-family:'Noto Sans Devanagari',sans-serif;color:#315C45}
+.product-footnote a,.text-link{color:#B83B32}
+.values{background:#F4EBDD}
+.process{background:#315C45}
+.process h2,.contact h2{color:#FFF8ED}
+.contact{background:#B83B32}
+.contact-whatsapp{border-radius:6px}
+.site-header{background:rgba(255,248,237,.95);border-bottom-color:#E9DFD0}
+.primary-nav>a:hover{color:#B83B32}
+.language-toggle{color:#315C45;border-color:#D9CBB8}
+.site-footer{background:#292722}
+@media(max-width:650px){
+  .hero h1{font-size:clamp(40px,10vw,53px)}
+  .lang-mr .hero h1{font-size:clamp(38px,9.5vw,50px);line-height:1.45}
+}
