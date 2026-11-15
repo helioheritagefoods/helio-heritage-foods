@@ -5,9 +5,20 @@
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.primary-nav');
   let language = 'en';
+  try {
+    const savedLanguage = localStorage.getItem('hhf-language');
+    if (savedLanguage === 'mr') language = 'mr';
+  } catch (_) {
+    // Storage may be unavailable; keep English as the safe default.
+  }
 
   function setLanguage(next) {
     language = next;
+    try {
+      localStorage.setItem('hhf-language', next);
+    } catch (_) {
+      // Language switching still works for the current page session.
+    }
     document.documentElement.lang = next === 'mr' ? 'mr' : 'en';
     document.body.classList.toggle('lang-mr', next === 'mr');
     document.querySelectorAll('[data-en][data-mr]').forEach((el) => {
@@ -26,10 +37,25 @@
     menuButton.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
     nav.classList.toggle('open', !expanded);
   });
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+  function closeMenu() {
     nav.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Open navigation');
-  }));
+  }
+
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (nav.classList.contains('open') && !nav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  setLanguage(language);
   document.querySelector('#year').textContent = new Date().getFullYear();
 })();
