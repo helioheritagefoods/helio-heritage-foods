@@ -48,6 +48,7 @@
     toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Marathi' : 'Switch to English');
     updateMenuButtonLabel('open');
     nav.setAttribute('aria-label', next === 'en' ? 'Main navigation' : 'मुख्य मेन्यू');
+    document.dispatchEvent(new CustomEvent('hhf:languagechange', { detail: { language: next } }));
   }
 
   toggle.addEventListener('click', () => setLanguage(language === 'en' ? 'mr' : 'en'));
