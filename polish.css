@@ -150,3 +150,19 @@ h1,h2,h3,.signature strong,.contact-email{font-family:'Manrope',sans-serif}
   .lang-mr .product-kicker,
   .lang-mr .detail-label { font-size: 11px; }
 }
+
+
+/* Product pack sizes, direct ordering and signature product emphasis. */
+.product-order-details{display:grid;gap:12px;margin-top:18px}
+.product-pack-sizes{display:flex;flex-wrap:wrap;align-items:center;gap:7px 10px;margin:0;color:var(--muted);font-size:11px;line-height:1.6}
+.product-pack-sizes strong{color:var(--ink);font-weight:700}
+.product-pack-sizes span{color:var(--green);font-weight:600}
+.product-order-button,.serve-order-link{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;width:max-content;max-width:100%;padding:10px 13px;border-radius:6px;background:var(--green);color:#fff;text-decoration:none;font-size:11px;font-weight:700;line-height:1.4;transition:background .2s ease,transform .2s ease}
+.product-order-button:hover,.serve-order-link:hover{background:#244735;transform:translateY(-1px)}
+.product-order-button:focus-visible,.serve-order-link:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.product-badge{position:absolute;z-index:2;top:14px;right:14px;padding:7px 11px;border-radius:30px;background:var(--yellow);color:var(--brown);font-size:10px;font-weight:800;letter-spacing:.02em;box-shadow:0 3px 12px #29272220}
+.card-mix{border-color:#d6b35c;box-shadow:0 8px 24px #6b4b1712}
+.card-mix .product-visual{outline:2px solid #e6a817;outline-offset:-2px}
+.serve-order-link{margin-top:9px;padding:7px 10px;font-size:10px}
+.serve-list article{align-items:center}
+@media(max-width:650px){.product-order-details{gap:10px}.product-order-button{width:100%}.product-pack-sizes{font-size:11px}.product-badge{top:11px;right:11px}.serve-order-link{font-size:10px}}

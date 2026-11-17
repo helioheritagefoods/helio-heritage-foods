@@ -32,6 +32,10 @@
       const value = el.dataset[next];
       if (value !== undefined) el.innerHTML = value;
     });
+    document.querySelectorAll('[data-wa-en][data-wa-mr]').forEach((link) => {
+      const message = link.dataset[next];
+      link.href = 'https://wa.me/919405118424?text=' + encodeURIComponent(message);
+    });
     langLabel.textContent = next === 'en' ? 'मराठी' : 'English';
     langIcon.textContent = next === 'en' ? 'अ' : 'En';
     toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Marathi' : 'Switch to English');
