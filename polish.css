@@ -166,3 +166,33 @@ h1,h2,h3,.signature strong,.contact-email{font-family:'Manrope',sans-serif}
 .serve-order-link{margin-top:9px;padding:7px 10px;font-size:10px}
 .serve-list article{align-items:center}
 @media(max-width:650px){.product-order-details{gap:10px}.product-order-button{width:100%}.product-pack-sizes{font-size:11px}.product-badge{top:11px;right:11px}.serve-order-link{font-size:10px}}
+
+
+/* Kitchen pairings — a compact extension of the existing product palette. */
+.pairings{background:#F4EBDD}
+.pairing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.pairing-card{position:relative;padding:24px 22px 22px;background:#FFFCF6;border:1px solid #E9DFD0;border-radius:10px;min-width:0}
+.pairing-number{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#E6A817;color:#292722;font-size:10px;font-weight:800}
+.pairing-card h3{margin:16px 0 7px;font-size:16px;color:#292722}
+.pairing-card p{margin:0 0 9px;color:#746B5F;font-size:12px;line-height:1.6}
+.pairing-card ul{margin:0;padding-left:18px;color:#315C45;font-size:12px;line-height:1.9}
+.pairing-kolhapuri{border-top:3px solid #B83B32}.pairing-turmeric{border-top:3px solid #E6A817}.pairing-chilli{border-top:3px solid #B83B32}.pairing-coriander{border-top:3px solid #315C45}.pairing-cumin{border-top:3px solid #8B6546}
+.lang-mr .pairing-card h3,.lang-mr .pairing-card p,.lang-mr .pairing-card ul{font-family:'Noto Sans Devanagari',sans-serif;line-height:1.85}
+.quick-enquiry{margin-top:26px;padding:22px;background:#FFFCF6;border:1px solid #E9DFD0;border-radius:10px;color:#292722}
+.quick-enquiry-heading h3{margin:5px 0 6px;font-size:20px;color:#292722}
+.quick-enquiry-heading>p:last-child{margin:0 0 18px;color:#746B5F;font-size:12px;line-height:1.65}
+.enquiry-field{display:grid;gap:7px;margin:14px 0}
+.enquiry-field label,.enquiry-spices legend{font-size:12px;font-weight:700;color:#292722}
+.enquiry-field select,.enquiry-field input,.enquiry-size{width:100%;min-height:42px;padding:9px 11px;border:1px solid #D9CBB8;border-radius:6px;background:#fff;color:#292722;font:inherit;font-size:12px}
+.enquiry-spices{margin:18px 0;padding:0;border:0;min-width:0}
+.enquiry-spices legend{margin-bottom:10px}
+.enquiry-spice-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(112px,42%);align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #E9DFD0}
+.enquiry-check{display:flex;align-items:center;gap:9px;min-height:38px;font-size:12px;color:#292722;cursor:pointer}
+.enquiry-check input{width:18px;height:18px;accent-color:#315C45;flex:0 0 auto}
+.enquiry-size:disabled{opacity:.48;background:#f4efe7}
+.enquiry-submit{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:48px;padding:12px 15px;border:0;border-radius:6px;background:#315C45;color:#fff;font:inherit;font-size:12px;font-weight:700;text-align:left;cursor:pointer}
+.enquiry-submit:hover{background:#244735}.enquiry-submit:focus-visible,.enquiry-field :focus-visible,.enquiry-size:focus-visible,.enquiry-check input:focus-visible{outline:3px solid #E6A817;outline-offset:2px}
+.enquiry-hint{margin:10px 0 0;color:#746B5F;font-size:11px;line-height:1.6}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:900px){.pairing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.pairing-grid{grid-template-columns:1fr;gap:12px;margin-top:24px}.pairing-card{padding:19px}.quick-enquiry{padding:17px;margin-top:20px}.quick-enquiry-heading h3{font-size:18px}.enquiry-spice-row{grid-template-columns:minmax(0,1fr) minmax(104px,40%);gap:8px}.enquiry-check{font-size:11px}.enquiry-field select,.enquiry-field input,.enquiry-size{font-size:12px;min-height:44px}.enquiry-submit{min-height:50px}}
