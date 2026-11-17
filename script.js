@@ -14,7 +14,7 @@
 
   function updateMenuButtonLabel(state) {
     const labels = language === 'mr'
-      ? { open: 'नेव्हिगेशन उघडा', close: 'नेव्हिगेशन बंद करा' }
+      ? { open: 'मेन्यू उघडा', close: 'मेन्यू बंद करा' }
       : { open: 'Open navigation', close: 'Close navigation' };
     menuButton.setAttribute('aria-label', labels[state]);
   }
@@ -43,7 +43,7 @@
     langIcon.textContent = next === 'en' ? 'अ' : 'En';
     toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Marathi' : 'Switch to English');
     updateMenuButtonLabel('open');
-    nav.setAttribute('aria-label', next === 'en' ? 'Main navigation' : 'मुख्य नेव्हिगेशन');
+    nav.setAttribute('aria-label', next === 'en' ? 'Main navigation' : 'मुख्य मेन्यू');
   }
 
   toggle.addEventListener('click', () => setLanguage(language === 'en' ? 'mr' : 'en'));
@@ -86,7 +86,7 @@
     const hint = document.querySelector('#enquiry-hint');
     if (!selected.length) {
       hint.textContent = language === 'mr'
-        ? 'कृपया किमान एक मसाला निवडा.'
+        ? 'कृपया चौकशीसाठी किमान एक मसाला निवडा.'
         : 'Please select at least one spice.';
       document.querySelector('.enquiry-spices').focus();
       return;
@@ -100,7 +100,7 @@
       return '- ' + name + ' — ' + row.querySelector('.enquiry-size').value;
     });
     const message = language === 'mr'
-      ? ['नमस्कार हेलिओ हेरिटेज फूड्स,', '', 'मला खालील मसाल्यांबाबत चौकशी करायची आहे:', ...lines, '', 'ग्राहक प्रकार: ' + buyerText, 'डिलिव्हरीचे ठिकाण: ' + (city || 'नमूद केलेले नाही'), '', 'कृपया किंमत आणि उपलब्धतेची माहिती द्या.'].join('\\n')
+      ? ['नमस्कार हेलिओ हेरिटेज फूड्स!', '', 'मला खालील मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे:', ...lines, '', 'ग्राहक प्रकार: ' + buyerText, 'माल पाठवायचे ठिकाण: ' + (city || 'नमूद केलेले नाही'), '', 'कृपया किंमत आणि उपलब्ध पॅकची माहिती कळवा.'].join('\\n')
       : ['Hello Helio Heritage Foods,', '', 'I would like to enquire about:', ...lines, '', 'Buyer type: ' + buyerText, 'Delivery location: ' + (city || 'Not specified'), '', 'Please share the prices and availability.'].join('\\n');
     const url = 'https://wa.me/919405118424?text=' + encodeURIComponent(message);
     window.open(url, '_blank', 'noopener,noreferrer');
