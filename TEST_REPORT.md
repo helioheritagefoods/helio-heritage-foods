@@ -64,3 +64,22 @@ The following require a real browser/device or a dedicated test environment. No 
 | CSS additions | Product action, signature badge and buyer action styles | PASS — selectors present |
 
 **Not run:** real browser interaction, visual viewport checks, WhatsApp hand-off on a device, Lighthouse and live structured-data validation. This repository has no package manifest or configured automated browser-test runner. The production branch was not changed by this feature branch.
+
+
+## 2026-11-17 — Kitchen pairings and quick enquiry builder
+
+**Branch:** feature/kitchen-pairings-quick-enquiry  
+**Test type:** Focused static source inspection
+
+| Test | Expected result | Result |
+|---|---|---|
+| Kitchen pairing content | Five spice guides with requested cooking uses | PASS — 5 cards found |
+| Pairing language support | English and Marathi text for each pairing | PASS — bilingual data attributes present |
+| Quick enquiry builder | Buyer type, five spice checkboxes, pack dropdowns and optional location | PASS — all controls found |
+| Pack-size controls | Each spice has a selectable pack size | PASS — 5 dropdowns, disabled until selected |
+| WhatsApp message | Selected buyer, items, sizes and optional location included | PASS — message assembled and URL-encoded |
+| Language toggle integration | Buyer labels, pack labels and city placeholder switch language | PASS — existing translation routine handles labels/options; placeholder updated on toggle |
+| Mobile-friendly styling | Responsive pairing grid and full-width submit action | PASS — mobile CSS rules added |
+| Existing sections and controls | Existing product cards and language toggle preserved | PASS — source anchors and handlers retained |
+
+**Not run:** real-browser interaction, visual viewport checks, keyboard/screen-reader review, WhatsApp hand-off on a device, and Lighthouse. The project has no configured browser-test runner. Manual verification is still recommended before production deployment.
