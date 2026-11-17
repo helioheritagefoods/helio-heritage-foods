@@ -103,8 +103,8 @@
       return '- ' + name + ' — ' + sizeText;
     });
     const message = language === 'mr'
-      ? ['नमस्कार हेलिओ हेरिटेज फूड्स!', '', 'मला खालील मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे:', ...lines, '', 'ग्राहक प्रकार: ' + buyerText, 'माल पाठवायचे ठिकाण: ' + (city || 'नमूद केलेले नाही'), '', 'कृपया किंमत आणि उपलब्ध पॅकची माहिती कळवा.'].join('\\n')
-      : ['Hello Helio Heritage Foods,', '', 'I would like to enquire about:', ...lines, '', 'Buyer type: ' + buyerText, 'Delivery location: ' + (city || 'Not specified'), '', 'Please share the prices and availability.'].join('\\n');
+      ? ['नमस्कार हेलिओ हेरिटेज फूड्स!', '', 'मला खालील मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे:', ...lines, '', 'ग्राहक प्रकार: ' + buyerText, 'माल पाठवायचे ठिकाण: ' + (city || 'नमूद केलेले नाही'), '', 'कृपया किंमत आणि उपलब्ध पॅकची माहिती कळवा.'].join('\n')
+      : ['Hello Helio Heritage Foods,', '', 'I would like to enquire about:', ...lines, '', 'Buyer type: ' + buyerText, 'Delivery location: ' + (city || 'Not specified'), '', 'Please share the prices and availability.'].join('\n');
     const url = 'https://wa.me/919405118424?text=' + encodeURIComponent(message);
     window.open(url, '_blank', 'noopener,noreferrer');
   });
