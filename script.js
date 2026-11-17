@@ -12,6 +12,13 @@
     // Storage may be unavailable; keep English as the safe default.
   }
 
+  function updateMenuButtonLabel(state) {
+    const labels = language === 'mr'
+      ? { open: 'नेव्हिगेशन उघडा', close: 'नेव्हिगेशन बंद करा' }
+      : { open: 'Open navigation', close: 'Close navigation' };
+    menuButton.setAttribute('aria-label', labels[state]);
+  }
+
   function setLanguage(next) {
     language = next;
     try {
@@ -28,7 +35,7 @@
     langLabel.textContent = next === 'en' ? 'मराठी' : 'English';
     langIcon.textContent = next === 'en' ? 'अ' : 'En';
     toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Marathi' : 'Switch to English');
-    menuButton.setAttribute('aria-label', next === 'en' ? 'Open navigation' : 'नेव्हिगेशन उघडा');
+    updateMenuButtonLabel('open');
     nav.setAttribute('aria-label', next === 'en' ? 'Main navigation' : 'मुख्य नेव्हिगेशन');
   }
 
@@ -36,13 +43,13 @@
   menuButton.addEventListener('click', () => {
     const expanded = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!expanded));
-    menuButton.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+    updateMenuButtonLabel(expanded ? 'open' : 'close');
     nav.classList.toggle('open', !expanded);
   });
   function closeMenu() {
     nav.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation');
+    updateMenuButtonLabel('open');
   }
 
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
