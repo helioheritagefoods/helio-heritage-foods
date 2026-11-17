@@ -274,3 +274,29 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   }
   .product-visual img{padding:10px}
 }
+
+
+/* Product range photo: keep the complete multi-pack image in a compact, balanced frame. */
+.spice-shelf-banner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:0;
+  padding:14px;
+  background:#f7efdf;
+}
+.spice-shelf-banner img{
+  display:block;
+  width:100%;
+  height:clamp(190px,24vw,300px);
+  max-height:300px;
+  object-fit:contain;
+  object-position:center;
+}
+@media(max-width:760px){
+  .spice-shelf-banner{padding:8px}
+  .spice-shelf-banner img{
+    height:clamp(150px,48vw,220px);
+    max-height:220px;
+  }
+}
