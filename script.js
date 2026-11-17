@@ -33,8 +33,12 @@
       if (value !== undefined) el.innerHTML = value;
     });
     document.querySelectorAll('[data-wa-en][data-wa-mr]').forEach((link) => {
-      const message = link.dataset[next];
-      link.href = 'https://wa.me/919405118424?text=' + encodeURIComponent(message);
+      // data-wa-en / data-wa-mr map to dataset.waEn / dataset.waMr.
+      const message = next === 'mr' ? link.dataset.waMr : link.dataset.waEn;
+      const safeMessage = message || (next === 'mr'
+        ? 'नमस्कार! मला तुमच्या मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे.'
+        : 'Hello Helio Heritage Foods, please share your product prices and availability.');
+      link.href = 'https://wa.me/919405118424?text=' + encodeURIComponent(safeMessage);
     });
     document.querySelectorAll('[data-placeholder-en][data-placeholder-mr]').forEach((input) => {
       input.placeholder = input.dataset[next];
