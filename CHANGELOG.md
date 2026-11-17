@@ -18,3 +18,12 @@
 - Replaced the Organization JSON-LD with LocalBusiness structured data using the existing published business contact and address details.
 - Ensured all images have descriptive alt text and lazy loading, except the priority-loaded hero image.
 - Added focused source-level checks to TEST_REPORT.md; live browser and device testing remain pending.
+
+
+## 2026-11-17 — Kitchen pairings and quick enquiry builder
+
+- Added a five-spice Kitchen Pairings & Usage Guide after The Spice Shelf, with English and Marathi cooking ideas.
+- Added a frontend-only Quick Enquiry Builder in the Contact section for buyer type, selected spices, pack sizes and optional delivery location.
+- Added a WhatsApp message generator that encodes the enquiry and opens the existing business WhatsApp number.
+- Added responsive styles matching the current cream, red, green and turmeric palette; no external libraries or backend services were introduced.
+- Recorded source-level checks in TEST_REPORT.md. Browser/device and assistive-technology testing remain pending.
