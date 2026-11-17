@@ -196,3 +196,14 @@ h1,h2,h3,.signature strong,.contact-email{font-family:'Manrope',sans-serif}
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:900px){.pairing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.pairing-grid{grid-template-columns:1fr;gap:12px;margin-top:24px}.pairing-card{padding:19px}.quick-enquiry{padding:17px;margin-top:20px}.quick-enquiry-heading h3{font-size:18px}.enquiry-spice-row{grid-template-columns:minmax(0,1fr) minmax(104px,40%);gap:8px}.enquiry-check{font-size:11px}.enquiry-field select,.enquiry-field input,.enquiry-size{font-size:12px;min-height:44px}.enquiry-submit{min-height:50px}}
+
+
+/* Packaging photography: show every pouch in full, including zip seal and net-weight badge. */
+.product-visual{background:#fffaf0;min-height:300px}
+.product-visual img{object-fit:contain;object-position:center center;padding:10px 8px;filter:none;z-index:0}
+.product-visual:after{pointer-events:none;background:linear-gradient(180deg,#fff6e510,#6b3e2608)}
+.spice-shelf-banner{margin:28px 0 8px;overflow:hidden;border:1px solid #E9DFD0;border-radius:12px;background:#f7efdf}
+.spice-shelf-banner img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;object-position:center}
+.enquiry-field select,.enquiry-field input,.enquiry-size,.enquiry-submit{position:relative;z-index:1;pointer-events:auto;touch-action:manipulation}
+.enquiry-size:disabled{cursor:not-allowed}
+@media(max-width:650px){.product-visual{min-height:280px}.product-visual img{padding:8px}.spice-shelf-banner{margin:20px 0 4px}.spice-shelf-banner img{max-height:none}}
