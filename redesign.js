@@ -128,6 +128,10 @@
     observed.forEach((section) => observer.observe(section));
   }
 
+  const initialHero = $('.hero-order');
+  if (initialHero) initialHero.href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(getLanguage() === 'mr'
+    ? 'नमस्कार! मला तुमच्या मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे.'
+    : 'Hello Helio Heritage Foods, I would like to place an order.');
   const orderUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(getLanguage() === 'mr'
     ? 'नमस्कार! मला तुमच्या मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे.'
     : 'Hello Helio Heritage Foods, I would like to place an order.');
@@ -179,7 +183,6 @@
         enquiryHint.textContent = getLanguage() === 'mr'
           ? 'कृपया चौकशीसाठी किमान एक मसाला निवडा.'
           : 'Please select at least one spice to continue.';
-        if ($('#enquiry-city', form)?.value.trim()) return;
         spicesFocus();
       }
     });
