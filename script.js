@@ -72,29 +72,30 @@
     }
   });
 
-  document.querySelectorAll('.enquiry-spice-check').forEach((checkbox) => {
-    checkbox.addEventListener('change', () => {
-      const row = checkbox.closest('.enquiry-spice-row');
-      const size = row.querySelector('.enquiry-size');
-      size.disabled = !checkbox.checked;
-    });
-  });
-
   const enquiryForm = document.querySelector('#quick-enquiry-form');
-  enquiryForm.addEventListener('submit', (event) => {
+  if (enquiryForm) {
+    enquiryForm.addEventListener('change', (event) => {
+      const checkbox = event.target.closest('.enquiry-spice-check');
+      if (!checkbox || !enquiryForm.contains(checkbox)) return;
+      const row = checkbox.closest('.enquiry-spice-row');
+      const size = row && row.querySelector('.enquiry-size');
+      if (size) size.disabled = !checkbox.checked;
+    });
+
+    enquiryForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const selected = Array.from(document.querySelectorAll('.enquiry-spice-check:checked'));
-    const hint = document.querySelector('#enquiry-hint');
+    const selected = Array.from(enquiryForm.querySelectorAll('.enquiry-spice-check:checked'));
+    const hint = enquiryForm.querySelector('#enquiry-hint');
     if (!selected.length) {
       hint.textContent = language === 'mr'
         ? 'कृपया चौकशीसाठी किमान एक मसाला निवडा.'
         : 'Please select at least one spice.';
-      document.querySelector('.enquiry-spices').focus();
+      enquiryForm.querySelector('.enquiry-spices').focus();
       return;
     }
-    const buyer = document.querySelector('#enquiry-buyer');
+    const buyer = enquiryForm.querySelector('#enquiry-buyer');
     const buyerText = buyer.options[buyer.selectedIndex].dataset[language];
-    const city = document.querySelector('#enquiry-city').value.trim();
+    const city = enquiryForm.querySelector('#enquiry-city').value.trim();
     const lines = selected.map((checkbox) => {
       const row = checkbox.closest('.enquiry-spice-row');
       const name = language === 'mr' ? checkbox.dataset.nameMr : checkbox.value;
@@ -107,7 +108,8 @@
       : ['Hello Helio Heritage Foods,', '', 'I would like to enquire about:', ...lines, '', 'Buyer type: ' + buyerText, 'Delivery location: ' + (city || 'Not specified'), '', 'Please share the prices and availability.'].join('\n');
     const url = 'https://wa.me/919405118424?text=' + encodeURIComponent(message);
     window.open(url, '_blank', 'noopener,noreferrer');
-  });
+    });
+  }
 
   setLanguage(language);
   document.querySelector('#year').textContent = new Date().getFullYear();
