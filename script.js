@@ -77,11 +77,12 @@
       const row = checkbox.closest('.enquiry-spice-row');
       const size = row.querySelector('.enquiry-size');
       size.disabled = !checkbox.checked;
-      if (checkbox.checked) size.focus({ preventScroll: true });
     });
   });
 
-  document.querySelector('#send-enquiry').addEventListener('click', () => {
+  const enquiryForm = document.querySelector('#quick-enquiry-form');
+  enquiryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     const selected = Array.from(document.querySelectorAll('.enquiry-spice-check:checked'));
     const hint = document.querySelector('#enquiry-hint');
     if (!selected.length) {
@@ -97,7 +98,9 @@
     const lines = selected.map((checkbox) => {
       const row = checkbox.closest('.enquiry-spice-row');
       const name = language === 'mr' ? checkbox.dataset.nameMr : checkbox.value;
-      return '- ' + name + ' — ' + row.querySelector('.enquiry-size').value;
+      const sizeSelect = row.querySelector('.enquiry-size');
+      const sizeText = sizeSelect.options[sizeSelect.selectedIndex].dataset[language] || sizeSelect.value;
+      return '- ' + name + ' — ' + sizeText;
     });
     const message = language === 'mr'
       ? ['नमस्कार हेलिओ हेरिटेज फूड्स!', '', 'मला खालील मसाल्यांची किंमत आणि उपलब्धता जाणून घ्यायची आहे:', ...lines, '', 'ग्राहक प्रकार: ' + buyerText, 'माल पाठवायचे ठिकाण: ' + (city || 'नमूद केलेले नाही'), '', 'कृपया किंमत आणि उपलब्ध पॅकची माहिती कळवा.'].join('\\n')
