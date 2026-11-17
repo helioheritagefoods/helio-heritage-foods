@@ -1,6 +1,6 @@
 /* Helio Heritage Foods — warm, mobile-first visual system */
 :root{
-  --leaf:#3B6B1F;--sun:#F2B01E;--earth:#6B3A1E;--cream:#FFF6E5;
+  --leaf:#3B6B1F;--sun:#F2B01E;--earth:#6B3A1E;--cream:#FFF6E5;--green:var(--leaf);--yellow:var(--sun);--brown:var(--earth);--red:var(--earth);--paper:#fff;
   --paper:#fff;--ink:#30251d;--muted:#66584b;--line:#eadcc5;
   --serif:Georgia,'Playfair Display',serif;--sans:'Manrope','Noto Sans Devanagari',Arial,sans-serif;
 }
